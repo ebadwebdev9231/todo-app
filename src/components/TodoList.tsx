@@ -50,14 +50,18 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
               justifyContent="space-between"
               gap="2"
               borderWidth="1px"
-              p="2"
+              p="3"
             >
               <Box>
                 <Checkbox
                   defaultChecked={todo.completed}
                   onChange={() => onCompleted(todo.id)}
                 >
-                  <Text as={todo.completed ? "del" : "span"} fontSize="lg">
+                  <Text
+                    as={todo.completed ? "del" : "span"}
+                    fontSize="lg"
+                    marginLeft="1"
+                  >
                     {todo.text}
                   </Text>
                 </Checkbox>
@@ -65,6 +69,7 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
               <HStack alignItems={"center"}>
                 <Icon
                   as={FaRegEdit}
+                  boxSize={5}
                   color="gray.400"
                   _hover={{ color: "gray.500", transition: ".5s" }}
                   role="button"
@@ -75,6 +80,7 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                 />
                 <Icon
                   as={RiDeleteBin6Line}
+                  boxSize={5}
                   color="gray.400"
                   _hover={{ color: "gray.500", transition: ".5s" }}
                   role="button"
@@ -84,10 +90,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
             </Flex>
           ) : (
             <HStack key={todo.id}>
-              <InputGroup>
+              <InputGroup size="lg">
                 <Input
                   autoFocus
-                  fontSize="lg"
                   value={editValue}
                   onChange={(e) => {
                     setEditValue(e.target.value);
@@ -96,6 +101,7 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                 <InputRightElement>
                   <Icon
                     as={IoMdCheckboxOutline}
+                    boxSize={5}
                     color="gray.400"
                     _hover={{ color: "gray.500", transition: ".5s" }}
                     role="button"

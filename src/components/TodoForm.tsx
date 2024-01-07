@@ -23,12 +23,8 @@ const TodoForm = ({ addTodo }: Props) => {
 
   return (
     <HStack spacing={4} marginBottom={3}>
-      <InputGroup>
-        <Input
-          fontSize="lg"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-        />
+      <InputGroup size="lg">
+        <Input value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />
         <InputRightElement>
           <Icon
             as={IoIosAddCircleOutline}
