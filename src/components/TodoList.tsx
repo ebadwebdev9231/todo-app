@@ -57,7 +57,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                   defaultChecked={todo.completed}
                   onChange={() => onCompleted(todo.id)}
                 >
-                  <Text as={todo.completed ? "del" : "span"}>{todo.text}</Text>
+                  <Text as={todo.completed ? "del" : "span"} fontSize="lg">
+                    {todo.text}
+                  </Text>
                 </Checkbox>
               </Box>
               <HStack alignItems={"center"}>
@@ -85,6 +87,7 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
               <InputGroup>
                 <Input
                   autoFocus
+                  fontSize="lg"
                   value={editValue}
                   onChange={(e) => {
                     setEditValue(e.target.value);

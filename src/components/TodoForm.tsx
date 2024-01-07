@@ -25,7 +25,7 @@ const TodoForm = ({ addTodo }: Props) => {
     <HStack spacing={4} marginBottom={3}>
       <InputGroup>
         <Input
-          type="text"
+          fontSize="lg"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
         />
