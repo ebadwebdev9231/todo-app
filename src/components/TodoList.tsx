@@ -63,7 +63,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
               <HStack alignItems={"center"}>
                 <Icon
                   as={FaRegEdit}
-                  color="#DAFFFB"
+                  color="gray.400"
+                  _hover={{ color: "gray.500", transition: ".5s" }}
+                  role="button"
                   onClick={() => {
                     handleEditStart(todo.id, todo.text),
                       console.log(todo.id, todo.text, editValue);
@@ -71,7 +73,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                 />
                 <Icon
                   as={RiDeleteBin6Line}
-                  color="#DAFFFB"
+                  color="gray.400"
+                  _hover={{ color: "gray.500", transition: ".5s" }}
+                  role="button"
                   onClick={() => onDelete(todo.id)}
                 />
               </HStack>
@@ -89,7 +93,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                 <InputRightElement>
                   <Icon
                     as={IoMdCheckboxOutline}
-                    color="#DAFFFB"
+                    color="gray.400"
+                    _hover={{ color: "gray.500", transition: ".5s" }}
+                    role="button"
                     onClick={() => handleEditSave(todo.id)}
                   />
                 </InputRightElement>

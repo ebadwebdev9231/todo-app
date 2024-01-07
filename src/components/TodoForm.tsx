@@ -33,7 +33,8 @@ const TodoForm = ({ addTodo }: Props) => {
           <Icon
             as={IoIosAddCircleOutline}
             boxSize={6}
-            color="#64CCC5"
+            color="cyan.400"
+            _hover={{ color: "cyan.600", transition: ".5s" }}
             cursor="pointer"
             onClick={handleTodo}
           />

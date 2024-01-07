@@ -45,7 +45,7 @@ const TodoWrapper = () => {
   };
 
   return (
-    <Box maxW="sm" mx="auto" paddingX={2}>
+    <Box maxW="md" mx="auto" paddingX={2}>
       <Heading marginY={5} textAlign="center">
         Todo App
       </Heading>
