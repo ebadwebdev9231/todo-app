@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { FaRegEdit } from "react-icons/fa";
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { IoMdCheckboxOutline } from "react-icons/io";
+import { FiCheckCircle } from "react-icons/fi";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { Todo } from "./TodoWrapper";
 import {
   Box,
@@ -68,10 +67,10 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
               </Box>
               <HStack alignItems={"center"}>
                 <Icon
-                  as={FaRegEdit}
-                  boxSize={5}
-                  color="gray.400"
-                  _hover={{ color: "gray.500", transition: ".5s" }}
+                  as={AiOutlineEdit}
+                  boxSize="23px"
+                  color="blue.400"
+                  _hover={{ color: "blue.500", transition: ".5s" }}
                   role="button"
                   onClick={() => {
                     handleEditStart(todo.id, todo.text),
@@ -79,10 +78,10 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                   }}
                 />
                 <Icon
-                  as={RiDeleteBin6Line}
-                  boxSize={5}
-                  color="gray.400"
-                  _hover={{ color: "gray.500", transition: ".5s" }}
+                  as={AiOutlineDelete}
+                  boxSize="23px"
+                  color="red.400"
+                  _hover={{ color: "red.500", transition: ".5s" }}
                   role="button"
                   onClick={() => onDelete(todo.id)}
                 />
@@ -100,10 +99,10 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
                 />
                 <InputRightElement>
                   <Icon
-                    as={IoMdCheckboxOutline}
-                    boxSize={5}
-                    color="gray.400"
-                    _hover={{ color: "gray.500", transition: ".5s" }}
+                    as={FiCheckCircle}
+                    boxSize="23px"
+                    color="green.400"
+                    _hover={{ color: "green.500", transition: ".5s" }}
                     role="button"
                     onClick={() => handleEditSave(todo.id)}
                   />
