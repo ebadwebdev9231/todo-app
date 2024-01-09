@@ -40,10 +40,9 @@ const TodoList = ({ todos, onDelete, onEdit, onCompleted }: Props) => {
   return (
     <>
       {todos.map((todo) => (
-        <Box>
+        <Box key={todo.id}>
           {editId !== todo.id ? (
             <Flex
-              key={todo.id}
               minWidth="max-content"
               alignItems="center"
               justifyContent="space-between"
